@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleReceiptVerifier", "AppleReceiptVerifier\AppleReceiptVerifier.csproj", "{BBA79B1A-A45F-44E9-A137-90D405E9810F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleReceiptVerifier.Test", "AppleReceiptVerifier.Test\AppleReceiptVerifier.Test.csproj", "{0F17D90C-24FD-4142-A9DD-DCF6CEF8BCCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleReceiptVerifier.Web", "AppleReceiptVerifier.Web\AppleReceiptVerifier.Web.csproj", "{8AA92AF8-9ECC-4D17-9DB6-E735810BAEBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleReceiptVerifier.Web.Tests", "AppleReceiptVerifier.Web.Tests\AppleReceiptVerifier.Web.Tests.csproj", "{53DAC931-5E55-43FF-848B-19C805FB4632}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBA79B1A-A45F-44E9-A137-90D405E9810F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA79B1A-A45F-44E9-A137-90D405E9810F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA79B1A-A45F-44E9-A137-90D405E9810F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA79B1A-A45F-44E9-A137-90D405E9810F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F17D90C-24FD-4142-A9DD-DCF6CEF8BCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F17D90C-24FD-4142-A9DD-DCF6CEF8BCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F17D90C-24FD-4142-A9DD-DCF6CEF8BCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F17D90C-24FD-4142-A9DD-DCF6CEF8BCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA92AF8-9ECC-4D17-9DB6-E735810BAEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA92AF8-9ECC-4D17-9DB6-E735810BAEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA92AF8-9ECC-4D17-9DB6-E735810BAEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA92AF8-9ECC-4D17-9DB6-E735810BAEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DAC931-5E55-43FF-848B-19C805FB4632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DAC931-5E55-43FF-848B-19C805FB4632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DAC931-5E55-43FF-848B-19C805FB4632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DAC931-5E55-43FF-848B-19C805FB4632}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
