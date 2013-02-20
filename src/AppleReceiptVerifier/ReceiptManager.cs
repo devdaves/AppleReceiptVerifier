@@ -14,7 +14,7 @@ namespace AppleReceiptVerifier
     /// </summary>
     public class ReceiptManager : IReceiptManager
     {
-                /// <summary>
+        /// <summary>
         /// The apple HTTP request
         /// </summary>
         private IAppleHttpRequest appleHttpRequest;

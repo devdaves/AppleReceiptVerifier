@@ -166,8 +166,7 @@ namespace AppleReceiptVerifier.Models
         /// <value>
         /// The original purchase date in milliseconds.
         /// </value>
-        [JsonProperty("original_purchase_date_pst")]
-        [JsonConverter(typeof(AppleDateTimeConverter))]
+        [JsonProperty("original_purchase_date_ms")]
         public long OriginalPurchaseDateMilliseconds { get; set; }
     }
 }
