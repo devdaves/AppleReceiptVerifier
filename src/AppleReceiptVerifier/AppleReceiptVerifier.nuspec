@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AppleReceiptVerifier</id>
+    <version>1.0.0.0</version>
+    <title>Apple Receipt Verifier</title>
+    <authors>Dave Stensgaard (DevDave)</authors>
+    <owners>Dave Stensgaard (DevDave)</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/devdaves/AppleReceiptVerifier</projectUrl>
+    <description>Provides a stronly typed way to validate receipts from Apple.</description>
+    <copyright>Copyright 2013</copyright>
+    <tags>Apple Receipt Validation</tags>
+    <dependencies>
+      <group targetFramework="net40">
+        <dependency id="Newtonsoft.Json" />
+      </group>
+    </dependencies>    
+  </metadata>
+  <files>
+    <file src="bin\release\AppleReceiptVerifier.dll" target="lib\net40"/>
+  </files>
+</package>

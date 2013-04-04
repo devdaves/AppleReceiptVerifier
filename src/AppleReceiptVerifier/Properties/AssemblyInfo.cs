@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AppleReceiptVerifier")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Apple Receipt Verifier")]
+[assembly: AssemblyDescription("Provides a stronly typed way to validate receipts from Apple.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dave Stensgaard")]
 [assembly: AssemblyProduct("AppleReceiptVerifier")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
