@@ -18,101 +18,104 @@
             <br />
             <input type="submit" value="Submit" />
         }
-        <table>
-            <tr>
-                <td>Status:</td>
-                <td>@Model.ReceiptResponse.Status</td>
-            </tr>
-            @if (Model.ReceiptResponse.Receipt != null)
-            {
+        @if (Model.ReceiptResponse != null)
+        {
+            <table>
+                <tr>
+                    <td>Status:</td>
+                    <td>@Model.ReceiptResponse.Status</td>
+                </tr>
+                @if (Model.ReceiptResponse.Receipt != null)
+                {
+                    <tr>
+                        <td>
+                            Receipt:
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>AppItemId</td>
+                                    <td>@Model.ReceiptResponse.Receipt.AppItemId</td>
+                                </tr>
+                                <tr>
+                                    <td>ApplicationVersionNumber</td>
+                                    <td>@Model.ReceiptResponse.Receipt.ApplicationVersionNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>BundleIdentifier</td>
+                                    <td>@Model.ReceiptResponse.Receipt.BundleIdentifier</td>
+                                </tr>
+                                <tr>
+                                    <td>ItemId</td>
+                                    <td>@Model.ReceiptResponse.Receipt.ItemId</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalPurchaseDateMilliseconds</td>
+                                    <td>@Model.ReceiptResponse.Receipt.OriginalPurchaseDateMilliseconds</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalPurchaseDatePst</td>
+                                    <td>@Model.ReceiptResponse.Receipt.OriginalPurchaseDatePst</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalPurchaseDateUtc</td>
+                                    <td>@Model.ReceiptResponse.Receipt.OriginalPurchaseDateUtc</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalTransactionId</td>
+                                    <td>@Model.ReceiptResponse.Receipt.OriginalTransactionId</td>
+                                </tr>
+                                <tr>
+                                    <td>ProductId</td>
+                                    <td>@Model.ReceiptResponse.Receipt.ProductId</td>
+                                </tr>
+                                <tr>
+                                    <td>PurchaseDateMilliseconds</td>
+                                    <td>@Model.ReceiptResponse.Receipt.PurchaseDateMilliseconds</td>
+                                </tr>
+                                <tr>
+                                    <td>PurchaseDatePst</td>
+                                    <td>@Model.ReceiptResponse.Receipt.PurchaseDatePst</td>
+                                </tr>
+                                <tr>
+                                    <td>PurchaseDateUtc</td>
+                                    <td>@Model.ReceiptResponse.Receipt.PurchaseDateUtc</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td>@Model.ReceiptResponse.Receipt.Quantity</td>
+                                </tr>
+                                <tr>
+                                    <td>TransactionId</td>
+                                    <td>@Model.ReceiptResponse.Receipt.TransactionId</td>
+                                </tr>
+                                <tr>
+                                    <td>UniqueIdentifier</td>
+                                    <td>@Model.ReceiptResponse.Receipt.UniqueIdentifier</td>
+                                </tr>
+                                <tr>
+                                    <td>UniqueVendorIdentifier</td>
+                                    <td>@Model.ReceiptResponse.Receipt.UniqueVendorIdentifier</td>
+                                </tr>
+                                <tr>
+                                    <td>VersionExternalIdentifier</td>
+                                    <td>@Model.ReceiptResponse.Receipt.VersionExternalIdentifier</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>  
+                }
                 <tr>
                     <td>
-                        Receipt:
+                        RawResponse:
                     </td>
                     <td>
-                        <table>
-                            <tr>
-                                <td>AppItemId</td>
-                                <td>@Model.ReceiptResponse.Receipt.AppItemId</td>
-                            </tr>
-                            <tr>
-                                <td>ApplicationVersionNumber</td>
-                                <td>@Model.ReceiptResponse.Receipt.ApplicationVersionNumber</td>
-                            </tr>
-                            <tr>
-                                <td>BundleIdentifier</td>
-                                <td>@Model.ReceiptResponse.Receipt.BundleIdentifier</td>
-                            </tr>
-                            <tr>
-                                <td>ItemId</td>
-                                <td>@Model.ReceiptResponse.Receipt.ItemId</td>
-                            </tr>
-                            <tr>
-                                <td>OriginalPurchaseDateMilliseconds</td>
-                                <td>@Model.ReceiptResponse.Receipt.OriginalPurchaseDateMilliseconds</td>
-                            </tr>
-                            <tr>
-                                <td>OriginalPurchaseDatePst</td>
-                                <td>@Model.ReceiptResponse.Receipt.OriginalPurchaseDatePst</td>
-                            </tr>
-                            <tr>
-                                <td>OriginalPurchaseDateUtc</td>
-                                <td>@Model.ReceiptResponse.Receipt.OriginalPurchaseDateUtc</td>
-                            </tr>
-                            <tr>
-                                <td>OriginalTransactionId</td>
-                                <td>@Model.ReceiptResponse.Receipt.OriginalTransactionId</td>
-                            </tr>
-                            <tr>
-                                <td>ProductId</td>
-                                <td>@Model.ReceiptResponse.Receipt.ProductId</td>
-                            </tr>
-                            <tr>
-                                <td>PurchaseDateMilliseconds</td>
-                                <td>@Model.ReceiptResponse.Receipt.PurchaseDateMilliseconds</td>
-                            </tr>
-                            <tr>
-                                <td>PurchaseDatePst</td>
-                                <td>@Model.ReceiptResponse.Receipt.PurchaseDatePst</td>
-                            </tr>
-                            <tr>
-                                <td>PurchaseDateUtc</td>
-                                <td>@Model.ReceiptResponse.Receipt.PurchaseDateUtc</td>
-                            </tr>
-                            <tr>
-                                <td>Quantity</td>
-                                <td>@Model.ReceiptResponse.Receipt.Quantity</td>
-                            </tr>
-                            <tr>
-                                <td>TransactionId</td>
-                                <td>@Model.ReceiptResponse.Receipt.TransactionId</td>
-                            </tr>
-                            <tr>
-                                <td>UniqueIdentifier</td>
-                                <td>@Model.ReceiptResponse.Receipt.UniqueIdentifier</td>
-                            </tr>
-                            <tr>
-                                <td>UniqueVendorIdentifier</td>
-                                <td>@Model.ReceiptResponse.Receipt.UniqueVendorIdentifier</td>
-                            </tr>
-                            <tr>
-                                <td>VersionExternalIdentifier</td>
-                                <td>@Model.ReceiptResponse.Receipt.VersionExternalIdentifier</td>
-                            </tr>
-                        </table>
+                        <pre id="receiptResponse" class="prettyprint lang-javascript">
+                        </pre>                    
                     </td>
-                </tr>  
-            }
-            <tr>
-                <td>
-                    RawResponse:
-                </td>
-                <td>
-                    <pre id="receiptResponse" class="prettyprint lang-javascript">
-                    </pre>                    
-                </td>
-            </tr>
-        </table>
+                </tr>
+            </table>  
+        }    
         <style type="text/css">
             td
             {
@@ -120,7 +123,7 @@
             }
         </style>
         <script language="javascript">
-            var response = @Html.Raw(Model.ReceiptResponse.RawResponse)
+            var response = @Html.Raw(Model.ReceiptResponse != null ? Model.ReceiptResponse.RawResponse : string.Empty)
             $("#receiptResponse").html(JSON.stringify(response, null, '\t'));
         </script>
     </body>
