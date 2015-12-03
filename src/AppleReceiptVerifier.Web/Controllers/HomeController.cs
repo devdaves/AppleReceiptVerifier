@@ -39,7 +39,7 @@ namespace AppleReceiptVerifier.Web.Controllers
                 env = AppleReceiptVerifier.Environments.Sandbox;
             }
 
-            var response = receiptManager.ValidateReceipt(env, model.ReceiptData);
+            var response = receiptManager.ValidateReceipt(env, model.ReceiptData, model.Password);
             model.ReceiptResponse = response;
 
             return this.View(model);

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleReceiptVerifier", "AppleReceiptVerifier\AppleReceiptVerifier.csproj", "{BBA79B1A-A45F-44E9-A137-90D405E9810F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleReceiptVerifier.Test", "AppleReceiptVerifier.Test\AppleReceiptVerifier.Test.csproj", "{0F17D90C-24FD-4142-A9DD-DCF6CEF8BCCD}"

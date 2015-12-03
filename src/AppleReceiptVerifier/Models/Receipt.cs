@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AppleReceiptVerifier.Converters;
 using Newtonsoft.Json;
 
 namespace AppleReceiptVerifier.Models
@@ -168,5 +169,43 @@ namespace AppleReceiptVerifier.Models
         /// </value>
         [JsonProperty("original_purchase_date_ms")]
         public long OriginalPurchaseDateMilliseconds { get; set; }
+
+        /// <summary>
+        /// Gets or sets the expires date UTC.
+        /// </summary>
+        /// <value>
+        /// The expires date UTC.
+        /// </value>
+        [JsonProperty("expires_date_formatted")]
+        [JsonConverter(typeof(AppleDateTimeConverter))]
+        public DateTime ExpiresDateUtc { get; set; }
+
+        /// <summary>
+        /// Gets or sets the expires date PST.
+        /// </summary>
+        /// <value>
+        /// The expires date PST.
+        /// </value>
+        [JsonProperty("expires_date_formatted_pst")]
+        [JsonConverter(typeof(AppleDateTimeConverter))]
+        public DateTime ExpiresDatePst { get; set; }
+
+        /// <summary>
+        /// Gets or sets the expired date in milliseconds.
+        /// </summary>
+        /// <value>
+        /// The expired date in milliseconds.
+        /// </value>
+        [JsonProperty("expires_date")]
+        public long ExpiresDateMilliseconds { get; set; }
+
+        /// <summary>
+        /// The primary key for identifying subscription purchases.
+        /// </summary>
+        /// <value>
+        /// The Web Order Line Item Id
+        /// </value>
+        [JsonProperty("web_order_line_item_id")]
+        public long WebOrderLineItemId { get; set; }
     }
 }

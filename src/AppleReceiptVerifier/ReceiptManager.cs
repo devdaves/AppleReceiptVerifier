@@ -41,8 +41,9 @@ namespace AppleReceiptVerifier
         /// </summary>
         /// <param name="postUri">Uri to post receipt data to</param>
         /// <param name="receiptData">receipt data from apple</param>
+        /// <param name="password">Your app’s shared secret (a hexadecimal string). Only used for receipts that contain auto-renewable subscriptions.</param>
         /// <returns>returns <see cref="Response" />Response</returns>
-        public Response ValidateReceipt(Uri postUri, string receiptData)
+        public Response ValidateReceipt(Uri postUri, string receiptData, string password = null)
         {
             try
             {
@@ -50,6 +51,12 @@ namespace AppleReceiptVerifier
 
                 Dictionary<string, string> postObject = new Dictionary<string, string>();
                 postObject.Add("receipt-data", receipt64);
+
+                if (!string.IsNullOrEmpty(password))
+                {
+                    postObject.Add("password", password);
+                }
+                
                 string json = JsonConvert.SerializeObject(postObject);
 
                 var rawResponse = this.appleHttpRequest.GetResponse(postUri, json);

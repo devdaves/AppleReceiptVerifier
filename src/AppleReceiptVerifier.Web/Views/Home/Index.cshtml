@@ -15,7 +15,10 @@
             <br />
             @Html.LabelFor(x => x.ReceiptData)<br />
             @Html.TextAreaFor(x => x.ReceiptData, 10, 60, null)<br />
-            <br />
+            <br/>
+            @Html.LabelFor(x => x.Password)<br/>
+            @Html.TextBoxFor(x => x.Password)<br/>
+            <br/>
             <input type="submit" value="Submit" />
         }
         @if (Model.ReceiptResponse != null)
@@ -24,6 +27,10 @@
                 <tr>
                     <td>Status:</td>
                     <td>@Model.ReceiptResponse.Status</td>
+                </tr>
+                <tr>
+                    <td>Status Description:</td>
+                    <td>@Model.ReceiptResponse.StatusDescription</td>
                 </tr>
                 @if (Model.ReceiptResponse.Receipt != null)
                 {
@@ -101,10 +108,125 @@
                                     <td>VersionExternalIdentifier</td>
                                     <td>@Model.ReceiptResponse.Receipt.VersionExternalIdentifier</td>
                                 </tr>
+
+                                <tr>
+                                    <td>ExpiresDateMilliseconds</td>
+                                    <td>@Model.ReceiptResponse.Receipt.ExpiresDateMilliseconds</td>
+                                </tr>
+                                <tr>
+                                    <td>ExpiresDatePst</td>
+                                    <td>@Model.ReceiptResponse.Receipt.ExpiresDatePst</td>
+                                </tr>
+                                <tr>
+                                    <td>ExpiresDateUtc</td>
+                                    <td>@Model.ReceiptResponse.Receipt.ExpiresDateUtc</td>
+                                </tr>
+
+                                <tr>
+                                    <td>WebOrderLineItemId</td>
+                                    <td>@Model.ReceiptResponse.Receipt.WebOrderLineItemId</td>
+                                </tr>
                             </table>
                         </td>
                     </tr>  
                 }
+                @if (Model.ReceiptResponse.LatestExpiredReceiptInfo != null)
+                {
+                    <tr>
+                        <td>Latest Expired Receipt Data</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>AppItemId</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.AppItemId</td>
+                                </tr>
+                                <tr>
+                                    <td>ApplicationVersionNumber</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.ApplicationVersionNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>BundleIdentifier</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.BundleIdentifier</td>
+                                </tr>
+                                <tr>
+                                    <td>ItemId</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.ItemId</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalPurchaseDateMilliseconds</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.OriginalPurchaseDateMilliseconds</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalPurchaseDatePst</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.OriginalPurchaseDatePst</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalPurchaseDateUtc</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.OriginalPurchaseDateUtc</td>
+                                </tr>
+                                <tr>
+                                    <td>OriginalTransactionId</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.OriginalTransactionId</td>
+                                </tr>
+                                <tr>
+                                    <td>ProductId</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.ProductId</td>
+                                </tr>
+                                <tr>
+                                    <td>PurchaseDateMilliseconds</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.PurchaseDateMilliseconds</td>
+                                </tr>
+                                <tr>
+                                    <td>PurchaseDatePst</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.PurchaseDatePst</td>
+                                </tr>
+                                <tr>
+                                    <td>PurchaseDateUtc</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.PurchaseDateUtc</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.Quantity</td>
+                                </tr>
+                                <tr>
+                                    <td>TransactionId</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.TransactionId</td>
+                                </tr>
+                                <tr>
+                                    <td>UniqueIdentifier</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.UniqueIdentifier</td>
+                                </tr>
+                                <tr>
+                                    <td>UniqueVendorIdentifier</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.UniqueVendorIdentifier</td>
+                                </tr>
+                                <tr>
+                                    <td>VersionExternalIdentifier</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.VersionExternalIdentifier</td>
+                                </tr>
+
+                                <tr>
+                                    <td>ExpiresDateMilliseconds</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.ExpiresDateMilliseconds</td>
+                                </tr>
+                                <tr>
+                                    <td>ExpiresDatePst</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.ExpiresDatePst</td>
+                                </tr>
+                                <tr>
+                                    <td>ExpiresDateUtc</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.ExpiresDateUtc</td>
+                                </tr>
+
+                                <tr>
+                                    <td>WebOrderLineItemId</td>
+                                    <td>@Model.ReceiptResponse.LatestExpiredReceiptInfo.WebOrderLineItemId</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                }
+
                 <tr>
                     <td>
                         RawResponse:

@@ -51,6 +51,15 @@ namespace AppleReceiptVerifier.Web.Models
         public string ReceiptData { get; set; }
 
         /// <summary>
+        /// Gets or sets the password.
+        /// </summary>
+        /// <value>
+        /// The password.
+        /// </value>
+        [DisplayName("Password")]
+        public string Password { get; set; }
+
+        /// <summary>
         /// Gets or sets the receipt response.
         /// </summary>
         /// <value>
