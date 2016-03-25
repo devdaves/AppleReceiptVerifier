@@ -199,6 +199,17 @@ namespace AppleReceiptVerifier.Models
         [JsonProperty("expires_date")]
         public long ExpiresDateMilliseconds { get; set; }
 
+
+        /// <summary>
+        /// Gets or sets the cancellation date in milliseconds.
+        /// </summary>
+        /// <value>
+        /// The cancellation date in milliseconds.
+        /// </value>
+        [JsonProperty("cancellation_date")]
+        [JsonConverter(typeof(AppleDateTimeConverter))]
+        public DateTime CancellationDateUtc { get; set; }
+
         /// <summary>
         /// The primary key for identifying subscription purchases.
         /// </summary>
