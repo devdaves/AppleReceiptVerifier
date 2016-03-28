@@ -41,8 +41,9 @@ namespace AppleReceiptVerifier.Test
                         purchase_date_pst = "2013-01-01 00:00:00 America/Los_Angeles",
                         original_purchase_date = "2013-01-01 00:00:00 Etc/GMT",
                         original_purchase_date_ms = "123456789",
-                        original_purchase_date_pst = "2013-01-01 00:00:00 America/Los_Angeles"
-                    },
+                        original_purchase_date_pst = "2013-01-01 00:00:00 America/Los_Angeles",
+                        cancellation_date = "2014-01-01 00:00:00 Etc/GMT",
+                },
                 status = 0
             });
 
@@ -260,6 +261,16 @@ namespace AppleReceiptVerifier.Test
         public void ValidateReceipt_HttpResponseValid_ResponseReceipt_PurchaseDateMilliseconds_ShouldBeValid()
         {
             this.ValidateProperty<long>(123456789, x => x.Receipt.PurchaseDateMilliseconds);
+        }
+
+        /// <summary>
+        /// When validating the receipt and the http request returns a valid response the 
+        /// response receipt cancellation date UTC should be valid
+        /// </summary>
+        [TestMethod]
+        public void ValidateReceipt_HttpResponseValid_ResponseReceipt_CancellationDateUtc_ShouldBeValid()
+        {
+            this.ValidateProperty<DateTime>(new DateTime(2014, 1, 1), x => x.Receipt.CancellationDateUtc);
         }
 
         /// <summary>
