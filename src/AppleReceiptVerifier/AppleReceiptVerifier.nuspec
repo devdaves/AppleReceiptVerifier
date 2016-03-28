@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AppleReceiptVerifier</id>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <title>Apple Receipt Verifier</title>
     <authors>Dave Stensgaard (DevDave)</authors>
     <owners>Dave Stensgaard (DevDave)</owners>
