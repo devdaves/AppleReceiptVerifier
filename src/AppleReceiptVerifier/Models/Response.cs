@@ -72,6 +72,26 @@ namespace AppleReceiptVerifier.Models
         public Receipt LatestExpiredReceiptInfo { get; set; }
 
         /// <summary>
+        /// Gets or sets the latest receipt info.
+        ///  This field is fill only when subscription is still active
+        /// </summary>
+        /// <value>
+        /// The latest receipt info.
+        /// </value>
+        [JsonProperty("latest_receipt_info")]
+        public Receipt LatestReceiptInfo { get; set; }
+
+        /// <summary>
+        /// Gets or sets the latest receipt (base 64).
+        /// This field is fill only when subscription is still active
+        /// </summary>
+        /// <value>
+        /// The latest receipt (base 64).
+        /// </value>
+        [JsonProperty("latest_receipt")]
+        public string LatestReceipt { get; set; }
+
+        /// <summary>
         /// Gets or sets the raw response.
         /// </summary>
         /// <value>
