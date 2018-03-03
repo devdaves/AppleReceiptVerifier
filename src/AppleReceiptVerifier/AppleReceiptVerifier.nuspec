@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AppleReceiptVerifier</id>
-    <version>1.0.0.3</version>
+    <version>1.0.0.4</version>
     <title>Apple Receipt Verifier</title>
     <authors>Dave Stensgaard (DevDave)</authors>
     <owners>Dave Stensgaard (DevDave)</owners>
@@ -13,7 +13,7 @@
     <tags>Apple Receipt Validation</tags>
     <dependencies>
       <group targetFramework="net40">
-        <dependency id="Newtonsoft.Json" />
+        <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
     </dependencies>    
   </metadata>
