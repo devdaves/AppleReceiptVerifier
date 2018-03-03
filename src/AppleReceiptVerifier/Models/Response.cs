@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -91,6 +92,68 @@ namespace AppleReceiptVerifier.Models
         [JsonProperty("latest_receipt")]
         public string LatestReceipt { get; set; }
 
+        /// <summary>
+        /// For an expired subscription, the reason for the subscription expiration.
+        /// </summary>
+        /// <remarks>
+        /// This key is only present for a receipt containing an expired auto-renewable subscription. You can use this value to decide whether to display appropriate messaging in your app for customers to resubscribe.
+        /// </remarks>
+        /// <see cref="https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW20"/>
+        [JsonProperty("expiration_intent")]
+        public string ExpirationIntent { get; set; }
+
+        /// <summary>
+        /// Descriptive strings for the value found in <see cref="ExpirationIntent"/> 
+        /// </summary>
+        public string ExpirationIntentDescription
+        {
+            get
+            {
+                switch (this.ExpirationIntent)
+                {
+                    case "1": return "Customer canceled their subscription.";
+                    case "2": return "Billing error; for example customer’s payment information was no longer valid.";
+                    case "3": return "Customer did not agree to a recent price increase.";
+                    case "4": return "Product was not available for purchase at the time of renewal.";
+                    case "5": return "Unknown error.";
+                    case null:
+                    case "":
+                        return "No value was set for 'expiration_intent'";
+                    default: return "Unknown value";
+                }
+            }
+        }
+
+        /// <summary>
+        /// For an expired subscription, whether or not Apple is still attempting to automatically renew the subscription.
+        /// </summary>
+        /// <remarks>
+        /// This key is only present for auto-renewable subscription receipts. If the customer’s subscription failed to renew because the App Store was unable to complete the transaction, this value will reflect whether or not the App Store is still trying to renew the subscription.
+        /// </remarks>
+        /// <see cref="https://developer.apple.com/library/content/releasenotes/General/ValidateAppStoreReceipt/Chapters/ReceiptFields.html#//apple_ref/doc/uid/TP40010573-CH106-SW24"/>
+        [JsonProperty("is_in_billing_retry_period")]
+        public string IsInBillingRetryPeriod { get; set; }
+
+        /// <summary>
+        /// Descriptive strings for the value found in <see cref="IsInBillingRetryPeriod"/> 
+        /// </summary>
+        public string IsInBillingRetryPeriodDescription
+        {
+            get
+            {
+                switch (this.IsInBillingRetryPeriod)
+                {
+                    case "1": return "App Store is still attempting to renew the subscription.";
+                    case "0": return "App Store has stopped attempting to renew the subscription.";
+                    case null:
+                    case "":
+                        return "No value was set for 'is_in_billing_retry_period'";
+                    default: return "Unknown value";
+                }
+            }
+        }
+             
+        
         /// <summary>
         /// Gets or sets the raw response.
         /// </summary>

@@ -45,7 +45,9 @@ namespace AppleReceiptVerifier.Test
                         cancellation_date = "2014-01-01 00:00:00 Etc/GMT",
                 },
                 latest_receipt = "base64string",
-                status = 0
+                status = 0,
+                expiration_intent = "2",
+                is_in_billing_retry_period = "1"
             });
 
         /// <summary>
@@ -314,6 +316,18 @@ namespace AppleReceiptVerifier.Test
             this.ValidateProperty<long>(123456789, x => x.Receipt.PurchaseDateMilliseconds);
         }
 
+        [TestMethod]
+        public void ValidateReceipt_HttpResponseValid_ExpirationIntent_ShouldBeValid()
+        {
+            this.ValidateProperty<string>("2", x => x.ExpirationIntent);
+        }
+        
+        [TestMethod]
+        public void ValidateReceipt_HttpResponseValid_IsInBillingRetryPeriod_ShouldBeValid()
+        {
+            this.ValidateProperty<string>("1", x => x.IsInBillingRetryPeriod);
+        }
+        
         /// <summary>
         /// Generic method to validate the property of the Response
         /// </summary>
